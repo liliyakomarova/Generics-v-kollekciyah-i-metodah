@@ -1,0 +1,1 @@
+# Generics-v-kollekciyah-i-metodah
