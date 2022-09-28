@@ -2,9 +2,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Шляпа с отделениями: ");
         MagicBox <String> magicBox = new MagicBox<>(3);
-        MagicBox.add("Кролик");
-        MagicBox.add("Блёстки");
-        MagicBox.add("Шарфик");
+        magicBox.add("Кролик");
+        magicBox.add("Блёстки");
+        magicBox.add("Шарфик");
         String pick = magicBox.pick();
         System.out.println("Волшебная шляпа: " + pick);
 

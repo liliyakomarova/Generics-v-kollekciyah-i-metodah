@@ -1,15 +1,14 @@
+import java.util.Arrays;
 import java.util.Random;
 public class MagicBox <T> {
-    protected static T [] items;
+    protected T [] items;
     Random random = new Random();
-    private T hull;
-
     public MagicBox(int size) {
         this.items = (T[]) new Object[size];
     }
-    public static boolean add(T item) {
+    public boolean add(T item) {
         for (int i = 0; items.length > i; i++) {
-            if (items[i] == hull) {
+            if (items[i] == null) {
                 items [i] = item;
                 System.out.println("Добавлено: " + item);
                 return true;
@@ -19,7 +18,7 @@ public class MagicBox <T> {
     }
     public T pick() {
         for (int i = 0; i < items.length; i++) {
-            if (items[i] == hull) {
+            if (items[i] == null) {
                 throw new RuntimeException("Положи ещё, осталось доложить: " + (items.length - i));
             }
         }
